@@ -1,0 +1,38 @@
+.ui-header {
+  background-color: var(--primary-primary-900);
+  padding: 1rem;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  align-content: center;
+  gap:  3rem;
+}
+
+.nome {
+  font-size: 1rem;
+  color: var(--neutral-neutral-50);
+}
+
+.avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--bg-bg-500);
+  color: var(--secondary-secondary-700);
+
+  .bi::before {
+    font-size: 2rem;
+    color: var(--secondary-secondary-700);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ui-header {
+    padding-left: calc(100vw / 2 - 600px);
+    padding-right: calc(100vw / 2 - 600px);
+  }
+}

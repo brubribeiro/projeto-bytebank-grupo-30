@@ -1,1 +1,13 @@
-<p>menu works!</p>
+<div class="card border-0 p-4 w-100">
+  <ul class="w-100 d-flex flex-xl-column flex-row justify-content-between gap-0 list-unstyled text-center">
+    <ng-container *ngFor="let item of menuItems">
+      <li class="col-xl-12 col-3 w-100">
+        <a class="d-flex flex-column w-100" [href]="item.path" [class.active]="item.active">
+          <span>{{ item.label }}</span>
+          <hr class="w-100" />
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+

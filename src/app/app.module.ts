@@ -17,6 +17,10 @@ import { InputComponent } from './dashboard/new-transaction/input/input.componen
 import { HeaderHomeComponent } from './home/header-home/header-home.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ContentComponent } from './home/content/content.component';
+import {
+  ButtonComponent as ByteBankButtonComponent,
+  HeaderComponent as ByteBankHeaderComponent,
+} from 'bytebank-ui';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,9 @@ import { ContentComponent } from './home/content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ByteBankButtonComponent,
+    ByteBankHeaderComponent
   ],
   providers: [
     provideClientHydration(),

@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --brand-brand-500: #47A138;
+  --brand-brand-950: #000;
+  --primary-primary-500: #00AFC9;
+  --primary-primary-600: #008AA1;
+  --primary-primary-700: #086E82;
+  --primary-primary-800: #0C5A6D;
+  --primary-primary-900: #004D61;
+  --secondary-secondary-500: #FFAC9D;
+  --secondary-secondary-600: #FF7B64;
+  --secondary-secondary-700: #FF5031;
+  --secondary-secondary-800: #ED3615;
+  --secondary-secondary-900: #C8290D;
+  --bg-bg-500: #F6F9F9;
+  --bg-bg-600: #EBF2F3;
+  --bg-bg-700: #DEE9EA;
+  --bg-bg-800: #AECACB;
+  --bg-bg-900: #81ADAF;
+  --bg-bg-1000: #E4EDE3;
+  --neutral-neutral-50: #F8F8F8;
+  --neutral-neutral-100: #EFEFEF;
+  --neutral-neutral-200: #DCDCDC;
+  --neutral-neutral-300: #BDBDBD;
+  --neutral-neutral-400: #989898;
+  --neutral-neutral-500: #7C7C7C;
+  --neutral-neutral-600: #656565;
+  --neutral-neutral-700: #525252;
+  --neutral-neutral-800: #464646;
+  --neutral-neutral-900: #3D3D3D;
+  --neutral-neutral-950: #292929;
+}
+
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
