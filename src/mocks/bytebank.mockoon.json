@@ -1,0 +1,389 @@
+{
+  "uuid": "d3826f2a-2baa-410e-a1aa-e9ff14e1960b",
+  "lastMigration": 32,
+  "name": "Bytebank.mockoon",
+  "endpointPrefix": "v1/bytebank",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "99a3049b-6cb3-4587-a4fb-8f468505017b",
+      "name": "accounts",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "dbe653e8-920d-4a66-8595-eb8374b6ac62"
+        },
+        {
+          "type": "route",
+          "uuid": "fd4a5faf-ecf9-433e-b642-16c041a13e8f"
+        },
+        {
+          "type": "route",
+          "uuid": "f07a54c5-88d8-416b-b312-8930da5683b2"
+        },
+        {
+          "type": "route",
+          "uuid": "9709f1b1-3e41-4045-811a-715647be7746"
+        }
+      ]
+    },
+    {
+      "uuid": "299cea82-ad0d-4ece-8079-40f402183b7a",
+      "name": "transactions",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "8d9625e2-eb65-4c64-a3ff-eb799a60134a"
+        },
+        {
+          "type": "route",
+          "uuid": "c6bd08ec-9ed8-4d87-9e7c-c6fb1dfd211c"
+        },
+        {
+          "type": "route",
+          "uuid": "654fc690-74d3-4f79-8a48-a0b45249f0bf"
+        },
+        {
+          "type": "route",
+          "uuid": "1bb0219f-3d44-42ed-9513-0a0dd8146df4"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "fd4a5faf-ecf9-433e-b642-16c041a13e8f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "83f11099-24eb-44ba-8034-636db65b0a5c",
+          "body": " \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  },",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "dbe653e8-920d-4a66-8595-eb8374b6ac62",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "3d667bdb-fd85-4d00-94a0-e81f58241df8",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "89a5d9a6-5260-4a55-90b0-6ef1a0f8de04",
+          "body": "{\n   \"id\": \"1\",\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "f07a54c5-88d8-416b-b312-8930da5683b2",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "accounts/:id",
+      "responses": [
+        {
+          "uuid": "5926a327-9fd1-4396-b8f5-198f191d2804",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fe9a447b-c4be-4ff4-a7d0-aa38f05122b8",
+          "body": "{\n   \"id\": \"1\",\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "9709f1b1-3e41-4045-811a-715647be7746",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "accounts/:id",
+      "responses": [
+        {
+          "uuid": "adbb9924-c844-48c5-bbab-4c7191153546",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "09a1e949-e5fe-4317-b5c3-43bd0424e446",
+          "body": "{\n   \"id\": \"1\",\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "8d9625e2-eb65-4c64-a3ff-eb799a60134a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "38d38d4a-6284-4cd5-8803-410c860ff190",
+          "body": " \"data\": [\n    { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n    { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n    { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n    { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n  ]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c6bd08ec-9ed8-4d87-9e7c-c6fb1dfd211c",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "cadfec4b-6acd-4d34-a7b5-af73af90e14f",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "654fc690-74d3-4f79-8a48-a0b45249f0bf",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "transactions/:id",
+      "responses": [
+        {
+          "uuid": "7959dc8b-d20c-4433-ba49-ab9694d92192",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "1bb0219f-3d44-42ed-9513-0a0dd8146df4",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "transactions/:id",
+      "responses": [
+        {
+          "uuid": "41445f8f-22ba-4d34-bde0-782044297afa",
+          "body": "{\n    \"id\": \"1\",\n},",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "99a3049b-6cb3-4587-a4fb-8f468505017b"
+    },
+    {
+      "type": "folder",
+      "uuid": "299cea82-ad0d-4ece-8079-40f402183b7a"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
