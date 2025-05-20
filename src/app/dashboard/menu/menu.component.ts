@@ -9,7 +9,7 @@ interface MenuItem {
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
   menuItems: MenuItem[] = [
@@ -18,4 +18,8 @@ export class MenuComponent {
     { label: 'Investimentos', path: '#', active: false },
     { label: 'Outros Serviços', path: '#', active: false }
   ];
+
+  onClick() {
+
+  }
 }

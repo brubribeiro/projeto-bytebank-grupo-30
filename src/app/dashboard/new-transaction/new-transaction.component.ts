@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NewTransactionComponent {
 
+  tipoTransacao: string = '';
+  valor: number | null = null;
+
+  concluirTransacao() {
+    console.log('Tipo:', this.tipoTransacao);
+    console.log('Valor:', this.valor);
+    
+  }
+
 }

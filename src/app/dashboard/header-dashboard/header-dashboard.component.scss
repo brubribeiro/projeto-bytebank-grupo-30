@@ -1,0 +1,26 @@
+
+
+:host {
+    .header {
+    background-color: #004d61; /* tom escuro teal */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    height: 96px;
+    }
+
+    .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    gap: 4px;
+    padding-right: 390px;
+    }
+
+    .user-name {
+    font-size: 16px;
+    font-weight: 500;
+    }
+}

@@ -1,26 +1,42 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BalanceComponent } from './dashboard/balance/balance.component';
+import { ButtonComponent } from './dashboard/button/button.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
 import { ExtractComponent } from './dashboard/extract/extract.component';
 import { HeaderDashboardComponent } from './dashboard/header-dashboard/header-dashboard.component';
-import { BalanceComponent } from './dashboard/balance/balance.component';
 import { MenuComponent } from './dashboard/menu/menu.component';
-import { NewTransactionComponent } from './dashboard/new-transaction/new-transaction.component';
-import { ButtonComponent } from './dashboard/button/button.component';
 import { DropdownComponent } from './dashboard/new-transaction/dropdown/dropdown.component';
 import { InputComponent } from './dashboard/new-transaction/input/input.component';
-import { HeaderHomeComponent } from './home/header-home/header-home.component';
-import { FooterComponent } from './home/footer/footer.component';
+import { NewTransactionComponent } from './dashboard/new-transaction/new-transaction.component';
 import { ContentComponent } from './home/content/content.component';
 import {
   ButtonComponent as ByteBankButtonComponent,
   HeaderComponent as ByteBankHeaderComponent,
 } from 'bytebank-ui';
+import { FooterComponent } from './home/footer/footer.component';
+import { HeaderHomeComponent } from './home/header-home/header-home.component';
+import { HomeComponent } from './home/home.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -37,18 +53,33 @@ import {
     InputComponent,
     HeaderHomeComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ByteBankButtonComponent,
-    ByteBankHeaderComponent
+    ByteBankHeaderComponent,
+    HttpClientModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatSelectModule,
+    MatButtonModule,
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

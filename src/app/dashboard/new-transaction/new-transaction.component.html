@@ -1,3 +1,31 @@
-<div class="card border-0 p-4 w-100">
-  <p>new-transaction works!</p>
-</div>
+<mat-card class="responsive-box">
+  <div class="transiction-container">
+    <div class="form-section">
+            <mat-card-title>
+              <h1>Nova transação</h1>
+            </mat-card-title>
+
+      <mat-form-field appearance="fill" class="new-transiction">
+        <mat-label>Selecione o tipo de transação</mat-label>
+        <mat-select [(value)]="tipoTransacao">
+          <mat-option value="entrada">Entrada</mat-option>
+          <mat-option value="saida">Saída</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="value-transiction">
+        <mat-label>Valor</mat-label>
+        <input matInput placeholder="00,00" [(ngModel)]="valor" type="number">
+      </mat-form-field>
+
+      <button mat-raised-button  (click)="concluirTransacao()">
+        Concluir transação
+      </button>
+    </div>
+
+    <div class="illustration-section">
+      <img src="assets/Ilustracao2.png" alt="Ilustração cartão de crédito">
+    </div>
+
+  </div>
+</mat-card>
