@@ -4,10 +4,10 @@
   width: 691px;
   height: 402px;
   transition: width 0.3s ease;
-  margin: 16px auto;
+  /* margin: 16px auto;
   margin-left: auto;
-  margin-right: auto;
-  
+  margin-right: auto; */
+
   .left-section {
     flex: 1;
     min-width: 250px;
@@ -50,7 +50,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  
+
   .balance-amount {
   font-size: 31px;
 }
@@ -88,7 +88,7 @@
   .responsive-box {
     width: 900px;
     height: 402px;
-      
+
     .balance {
     display: flex;
     align-items: center;

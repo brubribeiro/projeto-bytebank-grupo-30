@@ -1,16 +1,32 @@
 .dashboard {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
+  align-content: center;
   background-color: var(--bg-bg-1000);
   padding: 1.5rem;
   gap: 1.5rem;
-  width: 100%;
+  overflow-x: hidden;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .dashboard {
-    padding-left: calc(100vw / 2 - 600px);
-    padding-right: calc(100vw / 2 - 600px);
+    padding-left: calc((100vw - 1200px) / 2);
+    padding-right: calc((100vw - 1200px) / 2);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dashboard {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .menu, .extract {
+    width: 100%;
+    max-width: 691px;
   }
 }
