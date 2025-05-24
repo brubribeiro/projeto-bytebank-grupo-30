@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-new-transaction',
   templateUrl: './new-transaction.component.html',
-  styleUrl: './new-transaction.component.css'
+  styleUrl: './new-transaction.component.scss'
 })
 export class NewTransactionComponent {
 

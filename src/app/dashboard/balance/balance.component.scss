@@ -1,0 +1,164 @@
+@import '../../../styles/tokens';
+
+.balance-card {
+  background: $primary-900;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  color: $color-text-on-primary;
+  box-shadow: $shadow-medium;
+
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+
+  margin: $spacing-md auto 0;
+  position: relative;
+
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  &__greeting {
+    font-size: $font-heading-md-size;
+    font-weight: $font-heading-md-weight;
+    color: $color-text-on-primary;
+    margin-bottom: $spacing-md;
+    font-family: $font-family-base;
+  }
+
+  &__date {
+    color: $bg-800;
+    font-size: $font-body-sm-size;
+    margin-bottom: $spacing-lg;
+    font-family: $font-family-base;
+  }
+
+  &__illustration {
+    width: 280px;
+    margin-top: auto;
+    margin-left: 0;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    padding: $spacing-lg $spacing-lg 0 0;
+  }
+
+  &__saldo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: $font-body-md-semi-size;
+    font-weight: $font-body-md-semi-weight;
+    font-family: $font-family-base;
+  }
+
+  &__icon {
+    color: $secondary-700;
+    font-size: $font-body-md-semi-size;
+  }
+
+  &__divider {
+    width: 80%;
+    border: none;
+    border-top: 2px solid $secondary-700;
+    margin: $spacing-xs 0 $spacing-md 0;
+  }
+
+  &__account-type {
+    color: $bg-800;
+    font-size: $font-body-sm-size;
+    margin-bottom: $spacing-xs;
+    font-family: $font-family-base;
+  }
+
+  &__amount {
+    font-size: $font-heading-lg-size;
+    font-weight: $font-heading-lg-weight;
+    color: $color-text-on-primary;
+    font-family: $font-family-base;
+  }
+
+  &__decoration {
+    position: absolute;
+    width: 200px;
+    height: 170px;
+    background: url('/assets/pixels.svg') no-repeat;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+
+    &--left {
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: $border-radius-lg;
+    }
+    &--right {
+      top: 0;
+      right: 0;
+      border-top-right-radius: $border-radius-lg;
+      transform: scaleX(-1);
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__container {
+      flex-direction: column;
+      height: auto;
+    }
+    &__left, &__right {
+      padding: $spacing-lg 0 0 0;
+      align-items: flex-start;
+    }
+    &__illustration {
+      width: 120px;
+    }
+  }
+}
+
+@media (width <= 780px) {
+  .responsive-box {
+    width: 600px;
+    height: 402px;
+
+    .balance {
+    display: flex;
+    align-items: center;
+
+    mat-icon{
+        color:  #FF5031;
+    }
+  }
+  }
+}
+
+@media (width <= 480px) {
+  .responsive-box {
+    width: 900px;
+    height: 402px;
+      
+    .balance {
+    display: flex;
+    align-items: center;
+
+    mat-icon{
+        color:  white;
+    }
+  }
+  }
+}

@@ -1,26 +1,22 @@
-<mat-card class="responsive-box">
-  <div class="balance-container">
-    
+<mat-card class="balance-card">
+  <div class="balance-card__decoration balance-card__decoration--left"></div>
+  <div class="balance-card__decoration balance-card__decoration--right"></div>
 
-    <div class="left-section">
-      <mat-card-title>
-        <h1>Olá, Joana! :)</h1>
-      </mat-card-title>
-      <p>Quinta-feira, 08/09/2022</p>
-      <img src="assets/Ilustracao1.png" alt="Ilustração cofrinho" class="illustration">
+  <div class="balance-card__container">
+    <div class="balance-card__left">
+      <h1 class="balance-card__greeting">Olá, Joana! :)</h1>
+      <p class="balance-card__date">Quinta-feira, 08/09/2022</p>
+      <img src="assets/ilustracao.svg" alt="Ilustração cofrinho" class="balance-card__illustration">
     </div>
-
-
-    <div class="right-section">
-      <div class="balance">
+    <div class="balance-card__right">
+      <div class="balance-card__saldo">
         <span>Saldo</span>
-        <mat-icon>visibility</mat-icon>
+        <mat-icon class="balance-card__icon">visibility</mat-icon>
       </div>
-      <hr />
-      <p class="account-type">Conta corrente:</p>
-      <p class="balance-amount">R$ {{ saldo }}</p>
+      <hr class="balance-card__divider" />
+      <p class="balance-card__account-type">Conta corrente:</p>
+      <p class="balance-card__amount">R$ {{ saldo }}</p>
     </div>
-
   </div>
 </mat-card>
 

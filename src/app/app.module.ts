@@ -4,6 +4,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
+import { RouterModule } from '@angular/router';
+
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -67,6 +69,7 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,  
     MatSelectModule,
     MatButtonModule,  
+    RouterModule
   ],
   providers: [
     provideClientHydration(),

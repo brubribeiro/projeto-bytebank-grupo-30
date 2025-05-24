@@ -1,0 +1,109 @@
+@import '../../../styles/tokens';
+
+.transaction-card {
+  background: $neutral-300;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  color: $color-text-primary;
+  box-shadow: $shadow-medium;
+
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+
+  position: relative;
+  margin: $spacing-md auto 0;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: $font-heading-md-size;
+    font-weight: $font-heading-md-weight;
+    color: $primary-900;
+    margin-bottom: $spacing-lg;
+    font-family: $font-family-base;
+  }
+
+  &__field {
+    margin-bottom: $spacing-md;
+    width: 100%;
+
+    .mat-form-field-flex {
+      background: $bg-500;
+      border-radius: $border-radius-md;
+      border: 1.5px solid $primary-900;
+    }
+    .mat-form-field-label {
+      color: $primary-900;
+      font-family: $font-family-base;
+    }
+    .mat-input-element {
+      color: $color-text-primary;
+      font-family: $font-family-base;
+    }
+  }
+
+  &__button {
+    background: $primary-900 !important;
+    color: $color-text-on-primary !important;
+    border-radius: $border-radius-md;
+
+    font-family: $font-family-base;
+    font-size: $font-body-sm-size;
+    font-weight: $font-body-sm-semi-weight;
+
+    margin-top: $spacing-md;
+
+    padding: $spacing-sm;
+    
+    width: 100%;
+    height: 48px;
+  }
+
+  &__illustration {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex: 1;
+    img {
+      width: 320px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    width: 200px;
+    height: 170px;
+    background: url('/assets/pixels-grey.svg') no-repeat;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+
+    &--left {
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: $border-radius-lg;
+    }
+    &--right {
+      top: 0;
+      right: 0;
+      border-top-right-radius: $border-radius-lg;
+      transform: scaleX(-1);
+    }
+  }
+} 

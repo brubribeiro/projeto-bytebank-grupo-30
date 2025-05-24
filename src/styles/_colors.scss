@@ -1,0 +1,56 @@
+// Primary
+$primary-500: #00AFC9;
+$primary-600: #008AA1;
+$primary-700: #086E82;
+$primary-800: #0C5A6D;
+$primary-900: #004D61;
+
+// Secondary
+$secondary-500: #FFAC9D;
+$secondary-600: #F7B764;
+$secondary-700: #FF5031;
+$secondary-800: #ED3615;
+$secondary-900: #C8290D;
+
+// Background
+$bg-500: #F6F9F9;
+$bg-600: #EBF2F3;
+$bg-700: #DEE9EA;
+$bg-800: #AECACB;
+$bg-900: #81ADAF;
+
+// Neutral
+$neutral-50: #F8F8F8;
+$neutral-100: #EFEFEF;
+$neutral-200: #DCDCDC;
+$neutral-300: #BDBDBD;
+$neutral-400: #989898;
+$neutral-500: #7C7C7C;
+$neutral-600: #656565;
+$neutral-700: #525252;
+$neutral-800: #464646;
+$neutral-900: #3D3D3D;
+$neutral-950: #292929;
+
+// Brand
+$brand-500: #47A138;
+$brand-950: #000000;
+
+// Alias para uso rápido
+$color-primary: $primary-900;
+$color-secondary: $secondary-700;
+$color-background: $bg-500;
+$color-background-secondary: $bg-600;
+$color-background-tertiary: $bg-700;
+$color-text-primary: $neutral-950;
+$color-text-secondary: $neutral-700;
+$color-text-on-primary: #fff;
+$color-error: $secondary-900;
+$color-success: $brand-500;
+
+// Cores de texto
+$color-text-disabled: rgba(0, 0, 0, 0.38);
+$color-info: #2196f3;
+
+// Cores de fundo
+$color-background-disabled: #e0e0e0; 
