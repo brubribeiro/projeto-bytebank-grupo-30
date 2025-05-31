@@ -7,19 +7,16 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 0px 200px;
+    padding: 16px 200px;
     flex-wrap: wrap;
 
     .content {
       flex: 1;
-      min-width: 300px;
-
-      .image-container img {
-        max-width: 400px;
-        width: 100%;
-        height: auto;
-        transition: max-width 0.3s;
-      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
 
       h1 {
         color: $color-text-on-primary;
@@ -28,13 +25,16 @@
         font-weight: bold;
         margin-bottom: 1rem;
         text-align: left;
+        max-width: 380px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        transition: max-width 0.3s;
       }
     }
   }
-
-  .header-actions {
-  display: none;
-}
 
   .advantages {
     justify-items: center;
@@ -74,17 +74,25 @@
 
   @media (max-width: 1024px) {
     .container {
-      padding: 0px 40px;
+      padding: 16px 40px;
       flex-direction: column;
-      align-items: stretch;
+      align-items: center;
 
       .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: calc(100% - 64px);
+
+        h1,
         .image-container img {
-          max-width: 300px;
+          width: 100%;
         }
       }
     }
-    
+
 
     .advantages-list {
       flex-direction: column;
@@ -97,19 +105,21 @@
 
   @media (max-width: 600px) {
     .container {
-      padding: 0px 16px;
+      padding: 16px;
+      justify-content: center;
+      align-items: center;
 
       .content {
         min-width: 0;
-
-        .image-container img {
-          max-width: 180px;
-        }
 
         h1 {
           font-size: 1.2rem;
           text-align: center;
         }
+      }
+
+      .image-container img {
+        width: calc(100% - 32px);
       }
     }
 
@@ -119,15 +129,15 @@
     }
 
     .header-actions {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-  }
-      
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem;
+      justify-content: center;
+      align-content: space-between;
+      align-items: center;
+    }
+
 
     .advantages-list {
       gap: 20px;
@@ -137,6 +147,7 @@
         h3 {
           font-size: 1rem;
         }
+
         span {
           font-size: 1rem;
         }

@@ -71,6 +71,7 @@
   &__icon {
     color: $secondary-700;
     font-size: $font-body-md-semi-size;
+    padding: 3px;
   }
 
   &__divider {
@@ -151,7 +152,7 @@
   .responsive-box {
     width: 900px;
     height: 402px;
-      
+
     .balance {
     display: flex;
     align-items: center;

@@ -10,7 +10,7 @@
   padding-bottom: $spacing-md;
 }
 
-@media screen and (min-width: 721px) and (max-width: 1210px) {
+@media screen and (max-width: 1210px) {
   .dashboard {
     flex-direction: column;
     align-items: center;
