@@ -1,0 +1,35 @@
+@import "../../../styles/tokens";
+
+.extract-card {
+  .extract-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .extract-item {
+    margin: 10px 0;
+
+    .month {
+      color: green;
+      font-weight: bold;
+    }
+
+    .type {
+      font-weight: bold;
+    }
+
+    .deposit {
+      color: $brand-500;
+    }
+
+    .withdraw {
+      color: $secondary-700;
+    }
+
+    .date {
+      font-size: 12px;
+      color: $neutral-500;
+    }
+  }
+}
