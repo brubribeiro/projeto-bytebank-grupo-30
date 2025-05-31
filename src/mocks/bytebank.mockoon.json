@@ -2,7 +2,7 @@
   "uuid": "d3826f2a-2baa-410e-a1aa-e9ff14e1960b",
   "lastMigration": 32,
   "name": "Bytebank.mockoon",
-  "endpointPrefix": "v1/bytebank",
+  "endpointPrefix": "api/v1/bytebank",
   "latency": 0,
   "port": 3003,
   "hostname": "",
@@ -26,6 +26,10 @@
         {
           "type": "route",
           "uuid": "9709f1b1-3e41-4045-811a-715647be7746"
+        },
+        {
+          "type": "route",
+          "uuid": "3a4326e5-658e-4e07-a329-3ea9f254dc74"
         }
       ]
     },
@@ -235,7 +239,7 @@
       "responses": [
         {
           "uuid": "38d38d4a-6284-4cd5-8803-410c860ff190",
-          "body": " \"data\": [\n    { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n    { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n    { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n    { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n  ]",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"type\": \"Depósito\",\n    \"value\": 150,\n    \"date\": \"2022-11-18T00:00:00.000Z\"\n  },\n  {\n    \"id\": \"2\",\n    \"type\": \"Transferência\",\n    \"value\": -200,\n    \"date\": \"2022-11-21T00:00:00.000Z\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -341,6 +345,35 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "3a4326e5-658e-4e07-a329-3ea9f254dc74",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "accounts/:id",
+      "responses": [
+        {
+          "uuid": "5cf4e3e1-b542-46ee-969f-e05c8999a53f",
+          "body": " \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  },",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -367,6 +400,10 @@
   },
   "cors": true,
   "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
     {
       "key": "Content-Type",
       "value": "application/json"
