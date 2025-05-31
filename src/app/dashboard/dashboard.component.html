@@ -1,6 +1,11 @@
-<app-header-dashboard />
-<app-balance />
-<app-extract />
-<app-menu />
-<app-new-transaction />
-<app-button />
+<app-header-dashboard [nome]="nome" />
+<div class="dashboard">
+  <app-menu />
+  <div>
+    <app-balance [saldo]="saldo" [nome]="nome" />
+    <app-new-transaction />
+  </div>
+  <app-extract />
+
+</div>
+

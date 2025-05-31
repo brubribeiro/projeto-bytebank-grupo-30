@@ -1,0 +1,15 @@
+<div class="menu-card">
+  <ul class="menu-card__container">
+    <ng-container *ngFor="let item of menuItems">
+      <li>
+        <a
+          [href]="item.route"
+          [class.active]="item.active"
+        >
+          <span>{{ item.label }}</span>
+          <hr/>
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</div>

@@ -1,10 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  @Input() servicos = [
+    { text: 'Conta corrente' },
+    { text: 'Conta PJ' },
+    { text: 'Cartão de crédito' },
+  ];
 
+  @Input() contato = [
+    { text: '0800 326 7079' },
+    { text: 'meajuda@bytebank.com.br' },
+    { text: 'ouvidoria@bytebank.com.br' },
+  ];
+
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'instagram',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/Instagram.svg')
+    );
+    iconRegistry.addSvgIcon(
+      'whatsapp',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/Whatsapp.svg')
+    );
+    iconRegistry.addSvgIcon(
+      'youtube',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/Youtube.svg')
+    );
+  }
 }

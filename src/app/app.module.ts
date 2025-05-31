@@ -1,7 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, LOCALE_ID } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
@@ -33,6 +34,10 @@ import { HomeComponent } from './home/home.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import localePT from '@angular/common/locales/pt';
+registerLocaleData(localePT);
 
 
 
@@ -66,15 +71,20 @@ import { MatSelectModule } from '@angular/material/select';
     MatDividerModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule,  
+    FormsModule,
     MatSelectModule,
-    MatButtonModule,  
-    RouterModule
+    MatButtonModule,
+    MatMenuModule,
+    RouterModule,
+    MatButtonModule,
+    RouterModule,
+    MatListModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    { provide: LOCALE_ID, useValue: 'pt-br' }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

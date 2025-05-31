@@ -1,26 +1,47 @@
+@import "../../../styles/tokens";
 
+.header {
+  background: $color-primary;
+  color: $color-text-on-primary;
+  display: flex;
+  justify-content: space-between;
+  height: 96px;
+}
 
-:host {
-    .header {
-    background-color: #004d61; /* tom escuro teal */
-    color: white;
-    display: flex;
-    justify-content: space-between;
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  gap: $spacing-xl;
+  padding-right: 390px;
 
-    height: 96px;
-    }
+  &__name {
+    font-size: $font-body-sm-size;
+    font-weight: $font-body-md-semi-weight;
+    font-family: $font-family-base;
+  }
 
-    .user-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 1 1 auto;
-    gap: 4px;
-    padding-right: 390px;
-    }
+  &__icon {
+    background: $color-background;
+    color: $secondary-700;
+    font-size: $font-heading-md-size;
+    width: $font-heading-lg-size;
+    height: $font-heading-lg-size;
+    border-radius: $border-radius-full;
+    padding: $spacing-xxs;
+  }
+}
 
-    .user-name {
-    font-size: 16px;
-    font-weight: 500;
-    }
+.menu-button {
+  display: none;
+}
+
+@media  (max-width: 720px) {
+  .user-info {
+    display: none;
+  }
+  .menu-button {
+    display: block
+  }
 }

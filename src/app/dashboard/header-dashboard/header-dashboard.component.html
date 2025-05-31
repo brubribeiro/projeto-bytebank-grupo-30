@@ -1,7 +1,10 @@
 <mat-toolbar  class="header">
+  <button mat-icon-button class="menu-button" (click)="toggleSidenav()">
+    <mat-icon class="menu-button-icon mat-24" fontIcon="menu"></mat-icon>
+  </button>
   <div class="user-info">
-     <span class="user-name">{{ name }}</span>
-     <mat-icon class="mat-18 user-icon" fontIcon="account_circle"></mat-icon> 
+    <span class="user-info__name">{{ nome }}</span>
+    <mat-icon class="user-info__icon" fontIcon="person_outline"></mat-icon>
   </div>
 </mat-toolbar>
 
