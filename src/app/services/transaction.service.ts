@@ -10,6 +10,7 @@ export class TransactionService extends BaseService<Transaction> {
   }
 
   getByAccount() {
+    console.log('Fetching transactions for the account');
     return this.findAll();
   }
 }

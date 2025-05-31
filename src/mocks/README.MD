@@ -14,7 +14,7 @@ Este projeto utiliza o [Mockon](https://mockon.io) para simular um backend RESTf
 
 ### 1. Criar conta ou acessar o painel
 
-- Acesse: [https://mockon.io](https://mockon.io)
+- Acesse: [https://mockon.io](https://mockoon.com/docs/latest/server-configuration/cors/)
 - Faça login com sua conta GitHub ou email
 
 ---
