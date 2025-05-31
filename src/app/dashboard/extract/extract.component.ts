@@ -13,10 +13,10 @@ export class ExtractComponent implements OnInit {
   constructor(private transactionService: TransactionService) {}
 
   ngOnInit(): void {
-    this.getExtrato();
+    this.getTransactions();
   }
 
-  getExtrato(): void {
+  getTransactions(): void {
     this.transactionService.getByAccount().subscribe({
       next: (data) => (this.extrato = data),
       error: (err) => console.error('Erro ao carregar extrato:', err),

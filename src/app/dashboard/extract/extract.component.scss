@@ -1,35 +1,62 @@
 @import "../../../styles/tokens";
 
 .extract-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  width: 250px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+
   .extract-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
+
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    mat-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
   }
 
   .extract-item {
-    margin: 10px 0;
+    margin: 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
 
     .month {
-      color: green;
-      font-weight: bold;
-    }
-
-    .type {
-      font-weight: bold;
-    }
-
-    .deposit {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
       color: $brand-500;
     }
 
+    .type {
+      font-weight: 600;
+    }
+
+    .deposit {
+      color: #388e3c;
+      font-weight: bold;
+    }
+
     .withdraw {
-      color: $secondary-700;
+      color: #d32f2f;
+      font-weight: bold;
     }
 
     .date {
-      font-size: 12px;
-      color: $neutral-500;
+      font-size: 11px;
+      color: #999;
+      margin-top: 2px;
     }
   }
 }
