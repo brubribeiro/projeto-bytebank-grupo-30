@@ -4,7 +4,9 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export abstract class BaseService<T> {
-  protected baseUrl = `${environment.apiBaseUrl}${environment.apiVersion}${environment.apiNamespace}`;
+  protected baseUrl = environment.useLocalDb
+    ? `${environment.apiBaseUrl}`
+    : `${environment.apiBaseUrl}${environment.apiVersion}${environment.apiNamespace}`;
 
   constructor(protected http: HttpClient, private entityPath: string) {}
 

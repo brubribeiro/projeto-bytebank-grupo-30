@@ -1,0 +1,46 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "type": "Depósito",
+      "value": 150,
+      "date": "2022-11-18T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "type": "Depósito",
+      "value": 100,
+      "date": "2022-11-21T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "type": "Depósito",
+      "value": 50,
+      "date": "2022-11-21T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "type": "Transferência",
+      "value": -500,
+      "date": "2022-11-21T00:00:00.000Z"
+    },
+    {
+      "id": "zeldbpwfrd",
+      "value": 1000,
+      "date": "2025-05-31T22:22:05.459Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "3nv9hbsjnob",
+      "value": 1000,
+      "date": "2025-05-31T22:22:15.529Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "wpmxe4r8pwb",
+      "value": -50,
+      "date": "2025-05-31T22:22:38.630Z",
+      "type": "Transferência"
+    }
+  ]
+}
