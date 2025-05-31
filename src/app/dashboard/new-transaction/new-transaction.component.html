@@ -1,26 +1,44 @@
 <mat-card class="transaction-card">
-  <div class="transaction-card__decoration transaction-card__decoration--left"></div>
-  <div class="transaction-card__decoration transaction-card__decoration--right"></div>
+  <div
+    class="transaction-card__decoration transaction-card__decoration--left"
+  ></div>
+  <div
+    class="transaction-card__decoration transaction-card__decoration--right"
+  ></div>
   <div class="transaction-card__container">
     <div class="transaction-card__form">
       <h1 class="transaction-card__title">Nova transação</h1>
+
       <mat-form-field appearance="fill" class="transaction-card__field">
-        <mat-label>Selecione o tipo de transação</mat-label>
-        <mat-select [(value)]="tipoTransacao">
-          <mat-option value="entrada">Entrada</mat-option>
-          <mat-option value="saida">Saída</mat-option>
+        <mat-label>Tipo de transação</mat-label>
+        <mat-select [(value)]="transactionType">
+          <mat-option value="Depósito">Entrada</mat-option>
+          <mat-option value="Transferência">Saída</mat-option>
         </mat-select>
       </mat-form-field>
+
       <mat-form-field appearance="fill" class="transaction-card__field">
         <mat-label>Valor</mat-label>
-        <input matInput placeholder="00,00" [(ngModel)]="valor" type="number">
+        <input
+          matInput
+          placeholder="00,00"
+          [(ngModel)]="amount"
+          type="number"
+        />
       </mat-form-field>
-      <button mat-raised-button class="transaction-card__button" (click)="concluirTransacao()">
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="transaction-card__button"
+        (click)="finishTransaction()"
+      >
         Concluir transação
       </button>
     </div>
+
     <div class="transaction-card__illustration">
-      <img src="assets/Ilustracao2.png" alt="Ilustração cartão de crédito">
+      <img src="assets/Ilustracao2.png" alt="Ilustração cartão de crédito" />
     </div>
   </div>
 </mat-card>

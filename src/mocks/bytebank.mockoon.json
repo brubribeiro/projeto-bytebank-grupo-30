@@ -66,7 +66,7 @@
       "responses": [
         {
           "uuid": "83f11099-24eb-44ba-8034-636db65b0a5c",
-          "body": " \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  },",
+          "body": "{\n  \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -143,7 +143,7 @@
       "responses": [
         {
           "uuid": "5926a327-9fd1-4396-b8f5-198f191d2804",
-          "body": "{\n    \"id\": \"1\",\n},",
+          "body": "{\n  \"id\": \"1\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -191,7 +191,7 @@
       "responses": [
         {
           "uuid": "adbb9924-c844-48c5-bbab-4c7191153546",
-          "body": "{\n    \"id\": \"1\",\n},",
+          "body": "{\n  \"id\": \"1\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -268,7 +268,7 @@
       "responses": [
         {
           "uuid": "cadfec4b-6acd-4d34-a7b5-af73af90e14f",
-          "body": "{\n    \"id\": \"1\",\n},",
+          "body": "{\n  \"id\": \"1\"\n}",
           "latency": 0,
           "statusCode": 201,
           "label": "",
@@ -297,7 +297,7 @@
       "responses": [
         {
           "uuid": "7959dc8b-d20c-4433-ba49-ab9694d92192",
-          "body": "{\n    \"id\": \"1\",\n},",
+          "body": "{\n  \"id\": \"1\"\n}",
           "latency": 0,
           "statusCode": 204,
           "label": "",
@@ -326,7 +326,7 @@
       "responses": [
         {
           "uuid": "41445f8f-22ba-4d34-bde0-782044297afa",
-          "body": "{\n    \"id\": \"1\",\n},",
+          "body": "{\n  \"id\": \"1\"\n}",
           "latency": 0,
           "statusCode": 204,
           "label": "",
@@ -355,7 +355,7 @@
       "responses": [
         {
           "uuid": "5cf4e3e1-b542-46ee-969f-e05c8999a53f",
-          "body": " \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  },",
+          "body": "{\n  \"data\": {\n    \"id\": \"1\",\n    \"balance\": 2500,\n    \"transactions\": [\n      { \"id\": \"1\", \"type\": \"Depósito\", \"value\": 150, \"date\": \"2022-11-18T00:00:00.000Z\" },\n      { \"id\": \"2\", \"type\": \"Depósito\", \"value\": 100, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"3\", \"type\": \"Depósito\", \"value\": 50, \"date\": \"2022-11-21T00:00:00.000Z\" },\n      { \"id\": \"4\", \"type\": \"Transferência\", \"value\": -500, \"date\": \"2022-11-21T00:00:00.000Z\" }\n    ]\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -405,20 +405,24 @@
       "value": "application/json"
     },
     {
-      "key": "Content-Type",
-      "value": "application/json"
+      "key": "Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
     }
   ],
   "proxyReqHeaders": [
     {
-      "key": "",
-      "value": ""
+      "key": "Control-Allow-Origin",
+      "value": "*"
     }
   ],
   "proxyResHeaders": [
     {
-      "key": "",
-      "value": ""
+      "key": "Control-Allow-Origin",
+      "value": "*"
     }
   ],
   "data": [],
