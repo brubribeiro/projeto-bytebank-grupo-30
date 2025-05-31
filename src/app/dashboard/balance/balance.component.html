@@ -4,20 +4,18 @@
 
   <div class="balance-card__container">
     <div class="balance-card__left">
-      <h1 class="balance-card__greeting">Olá, Joana! :)</h1>
-      <p class="balance-card__date">Quinta-feira, 08/09/2022</p>
+      <h1 class="balance-card__greeting">Olá, {{ nomeCurto }}! :)</h1>
+      <p class="balance-card__date">{{ hoje | date:'EEEE' | titlecase }} , {{ hoje | date:'dd/MM/yyyy' }}</p>
       <img src="assets/ilustracao.svg" alt="Ilustração cofrinho" class="balance-card__illustration">
     </div>
     <div class="balance-card__right">
       <div class="balance-card__saldo">
         <span>Saldo</span>
-        <mat-icon class="balance-card__icon">visibility</mat-icon>
+        <mat-icon class="balance-card__icon" (click)="saldoVisivel = !saldoVisivel" >{{ !saldoVisivel ? 'visibility_off' : 'visibility'}}</mat-icon>
       </div>
       <hr class="balance-card__divider" />
       <p class="balance-card__account-type">Conta corrente:</p>
-      <p class="balance-card__amount">R$ {{ saldo }}</p>
+      <p class="balance-card__amount">{{ !saldoVisivel ? 'R$ ******' : saldo | currency: 'BRL' }}</p>
     </div>
   </div>
 </mat-card>
-
-

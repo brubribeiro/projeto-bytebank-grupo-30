@@ -1,0 +1,98 @@
+@import "../../../styles/tokens";
+
+.menu-card {
+  background: $bg-500;
+  background: white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  color: $primary-900;
+  box-shadow: $shadow-small;
+  width: 100%;
+  max-width: 180px;
+  margin: $spacing-md auto 0;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      width: 100%;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: $primary-900;
+
+    &.active,
+    &:hover {
+      color: $brand-500;
+    }
+
+    hr {
+      margin: $spacing-sm 0;
+      color: inherit;
+      border: 0;
+      border-top: 1px solid;
+      opacity: 0.75;
+      width: 100%;
+    }
+  }
+}
+
+ul {
+  margin: 0 !important
+}
+
+@media  (max-width: 720px) {
+  .menu-card {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1210px) {
+  .menu-card {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    min-width: 588px;
+    width: 100%;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    padding: 0 $spacing-xs;
+    margin: $spacing-md auto 0;
+    color: $brand-950;
+    position: relative;
+    gap: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: $spacing-xs;
+      width: 100%;
+    }
+
+    a > hr {
+      margin: $spacing-xs 0;
+    }
+  }
+}

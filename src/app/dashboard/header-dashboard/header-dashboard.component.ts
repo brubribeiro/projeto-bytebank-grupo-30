@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-dashboard',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './header-dashboard.component.scss'
 })
 export class HeaderDashboardComponent {
-  name = 'Joana da Silva'
+  @Input() nome = 'Joana da Silva';
+
+  toggleSidenav(): void {
+    
+  }
 }
