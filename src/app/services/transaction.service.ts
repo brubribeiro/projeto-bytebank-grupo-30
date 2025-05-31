@@ -8,4 +8,8 @@ export class TransactionService extends BaseService<Transaction> {
   constructor(http: HttpClient) {
     super(http, 'transactions');
   }
+
+  getByAccount() {
+    return this.findAll();
+  }
 }

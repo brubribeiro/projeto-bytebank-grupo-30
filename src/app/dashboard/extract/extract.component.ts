@@ -1,22 +1,25 @@
-import { Component } from '@angular/core';
-
-interface ExtratoItem {
-  mes: string;
-  tipo: string;
-  valor: number;
-  data: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { TransactionService } from '../../services/transaction.service';
+import { Transaction } from '../../models/transaction.model';
 
 @Component({
   selector: 'app-extract',
   templateUrl: './extract.component.html',
   styleUrls: ['./extract.component.scss'],
 })
-export class ExtractComponent {
-  extrato: ExtratoItem[] = [
-    { mes: 'Novembro', tipo: 'Depósito', valor: 150, data: '18/11/2022' },
-    { mes: 'Novembro', tipo: 'Depósito', valor: 100, data: '21/11/2022' },
-    { mes: 'Novembro', tipo: 'Depósito', valor: 50, data: '21/11/2022' },
-    { mes: 'Novembro', tipo: 'Transferência', valor: -500, data: '21/11/2022' },
-  ];
+export class ExtractComponent implements OnInit {
+  extrato: Transaction[] = [];
+
+  constructor(private transactionService: TransactionService) {}
+
+  ngOnInit(): void {
+    this.getExtrato();
+  }
+
+  getExtrato(): void {
+    this.transactionService.getByAccount().subscribe({
+      next: (data) => (this.extrato = data),
+      error: (err) => console.error('Erro ao carregar extrato:', err),
+    });
+  }
 }
