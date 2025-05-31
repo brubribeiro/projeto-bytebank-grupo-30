@@ -239,7 +239,7 @@
       "responses": [
         {
           "uuid": "38d38d4a-6284-4cd5-8803-410c860ff190",
-          "body": "[\n  {\n    \"id\": \"1\",\n    \"type\": \"Depósito\",\n    \"value\": 250,\n    \"date\": \"2022-11-18T00:00:00.000Z\"\n  },\n  {\n    \"id\": \"2\",\n    \"type\": \"Transferência\",\n    \"value\": -200,\n    \"date\": \"2022-11-21T00:00:00.000Z\"\n  }\n]",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"type\": \"Depósito\",\n    \"value\": 350,\n    \"date\": \"2022-11-18T00:00:00.000Z\"\n  },\n  {\n    \"id\": \"2\",\n    \"type\": \"Transferência\",\n    \"value\": -200,\n    \"date\": \"2022-11-21T00:00:00.000Z\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
