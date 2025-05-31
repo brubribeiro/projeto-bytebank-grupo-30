@@ -35,6 +35,7 @@ import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 import localePT from '@angular/common/locales/pt';
 registerLocaleData(localePT);
 
@@ -74,7 +75,10 @@ registerLocaleData(localePT);
     MatSelectModule,
     MatButtonModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    RouterModule,
+    MatListModule
   ],
   providers: [
     provideClientHydration(),
