@@ -57,4 +57,40 @@
       color: white;
     }
   }
+
+  @media screen and (max-width: 360px) {
+    .footer-content {
+      padding: 0px 65px;
+    }
+
+    .footer-column {
+      margin-bottom: 24px;
+    }
+
+    .footer-column-icons {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .footer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0px 16px;
+  }
+
+  .footer-content{
+    gap: 4px;
+  }
+
+    .footer-column {
+      margin-bottom: 24px;
+    }
+
+    .footer-column-icons {
+      margin-bottom: 24px;
+    }
+  }
 }

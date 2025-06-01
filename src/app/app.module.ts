@@ -73,7 +73,7 @@ registerLocaleData(localePT);
     MatFormFieldModule,
     FormsModule,
     MatSelectModule,
-    MatButtonModule,
+    MatButtonModule,  
     MatMenuModule,
     RouterModule,
     MatButtonModule,

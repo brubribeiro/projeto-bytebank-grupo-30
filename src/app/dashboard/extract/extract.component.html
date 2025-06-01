@@ -11,15 +11,20 @@
     </div>
   </div>
 
-  <mat-divider></mat-divider>
-
   <div *ngFor="let item of extrato" class="extract-item">
-    <p class="month">{{ item.type }}</p>
-    <p class="type">{{ item.value }}</p>
-    <p [ngClass]="{ deposit: item.value > 0, withdraw: item.value < 0 }">
-      R$ {{ item.value }}
-    </p>
-    <p class="date">{{ item.date | date : "dd/MM/yyyy" }}</p>
-    <mat-divider></mat-divider>
+    <div class="item-left">
+      <p class="month">Novembro</p>
+      <p class="type">{{ item.type }}</p>
+      <p
+        class="value"
+        [ngClass]="{ deposit: item.value > 0, withdraw: item.value < 0 }"
+      >
+        R$ {{ item.value }}
+      </p>
+      <mat-divider class="divider-line"></mat-divider>
+    </div>
+    <div class="item-right">
+      <p class="date">{{ item.date | date : "dd/MM/yyyy" }}</p>
+    </div>
   </div>
 </mat-card>

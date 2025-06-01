@@ -3,11 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Transaction } from '../models/transaction.model';
 import { TransactionType } from '../enums/transaction-type.enum';
 import { BaseService } from './base.service';
-import { Observable, firstValueFrom } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, firstValueFrom, Subject } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class TransactionService extends BaseService<Transaction> {
+  private transactionsUpdated = new Subject<void>();
+
+  public transactionsUpdated$ = this.transactionsUpdated.asObservable();
+
   constructor(http: HttpClient) {
     super(http, 'transactions');
   }
@@ -32,7 +36,9 @@ export class TransactionService extends BaseService<Transaction> {
 
   addMoney(transaction: Omit<Transaction, 'type'>): Observable<Transaction> {
     const entrada = { ...transaction, type: TransactionType.DEPOSIT };
-    return this.create(entrada);
+    return this.create(entrada).pipe(
+      tap(() => this.transactionsUpdated.next())
+    );
   }
 
   removeMoney(transaction: Omit<Transaction, 'type'>): Observable<Transaction> {
@@ -41,6 +47,10 @@ export class TransactionService extends BaseService<Transaction> {
       type: TransactionType.TRANSFER,
       value: -Math.abs(transaction.value),
     };
-    return this.create(saida);
+    return this.create(saida).pipe(tap(() => this.transactionsUpdated.next()));
+  }
+
+  updateTransactions(): void {
+    this.transactionsUpdated.next();
   }
 }
