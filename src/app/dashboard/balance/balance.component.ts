@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TransactionService } from '../../services/transaction.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { TransactionService } from '../../services/transaction.service';
 })
 export class BalanceComponent implements OnInit {
   saldo = 0;
-  nome = 'Joana da Silva';
+  @Input() nome = '';
   hoje = new Date();
   saldoVisivel = true;
 

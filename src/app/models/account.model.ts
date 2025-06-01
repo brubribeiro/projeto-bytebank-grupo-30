@@ -1,7 +1,12 @@
-import { Transaction } from './transaction.model';
-
 export interface Account {
   id: string;
+  number: string;
   balance: number;
-  transactions: Transaction[];
+  customer: CustomerAccount;
+}
+
+export interface CustomerAccount {
+  id: string;
+  name: string;
+  email: string;
 }
