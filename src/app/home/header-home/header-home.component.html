@@ -1,15 +1,22 @@
-<mat-toolbar class="header">
-  <div class="icon-header">
-    <img src="assets/Logo.svg" />
-    <span>Sobre</span>
-    <span>Serviços</span>
-  </div>
-  <div class="button-header">
-    <button mat-raised-button class="button-primary" (click)="onClick()">
-      Abrir minha conta
-    </button>
-    <button mat-raised-button class="button-secondary" (click)="onClick()">
-      Já tenho conta
-    </button>
-  </div>
+<mat-toolbar class="header header--menu">
+  <button
+    mat-icon-button
+    class="menu-button"
+    [matMenuTriggerFor]="menu"
+    aria-label="Menu"
+  >
+    <mat-icon fontIcon="menu"></mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <ng-container *ngFor="let item of menuItems">
+      <a mat-menu-item [href]="item.route" [class.active]="item.active">
+        <span>{{ item.label }}</span>
+      </a>
+    </ng-container>
+  </mat-menu>
+
+  <span class="brand-logo">
+    <img src="assets/Logo.svg" alt="Bytebank" height="24" />
+  </span>
 </mat-toolbar>

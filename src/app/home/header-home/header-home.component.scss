@@ -47,6 +47,10 @@
       align-items: center;
       gap: 40px;
     }
+
+    mat-icon {
+      color: $brand-500;
+    }
   }
 
   @media (max-width: 1024px) {
