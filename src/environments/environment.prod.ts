@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'http://localhost:3003/api',
+  apiBaseUrl: 'http://localhost:3003',
   apiVersion: '/v1',
-  apiNamespace: '/bytebank'
+  apiNamespace: '/bytebank',
 };
