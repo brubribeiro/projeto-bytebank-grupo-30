@@ -12,13 +12,14 @@ export class DashboardComponent implements OnInit {
   constructor(private accountService: AccountService) {}
 
   ngOnInit(): void {
-    this.accountService.loadAccount().subscribe({
+    this.accountService.account$.subscribe({
       next: (account) => {
-        this.customerName = account.customer.name;
-      },
-      error: (err) => {
-        console.error('Erro ao carregar conta:', err);
+        if (account) {
+          this.customerName = account.customer.name;
+        }
       },
     });
+
+    this.accountService.loadAccount().subscribe();
   }
 }
