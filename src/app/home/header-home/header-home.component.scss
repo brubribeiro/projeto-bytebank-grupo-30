@@ -1,4 +1,4 @@
-@import '../../../styles/tokens';
+@import "../../../styles/tokens";
 
 :host {
   .header {
@@ -13,6 +13,10 @@
     span {
       color: $brand-500;
       cursor: pointer;
+
+      &:hover {
+        color: $color-text-on-primary;
+      }
     }
 
     img {
@@ -28,12 +32,13 @@
     .button-primary {
       background-color: $brand-500;
       color: $neutral-100;
+      border-radius: $spacing-xs;
     }
 
     .button-secondary {
       background-color: $brand-950;
       color: $brand-500;
-      border-radius: 8px;
+      border-radius: $spacing-xs;
       border: 2px solid $brand-500;
     }
 
@@ -44,7 +49,7 @@
     }
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 1024px) {
     .header {
       padding: 0 40px;
       height: auto;
@@ -81,7 +86,7 @@
 
       .icon-header {
         flex-direction: column;
-        gap: 8px;
+        gap: $spacing-xs;
         width: 100%;
         align-items: center;
 

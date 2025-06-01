@@ -37,11 +37,44 @@
   display: none;
 }
 
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: $primary-900;
+
+  &.active,
+  &:hover {
+    color: $brand-500;
+  }
+
+  hr {
+    margin: $spacing-sm 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.75;
+    width: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   .user-info {
     display: none;
   }
   .menu-button {
     display: block;
+  }
+}
+
+:host::ng-deep {
+  .mat-mdc-menu-item,
+  .mat-mdc-menu-item:visited,
+  .mat-mdc-menu-item:link {
+    color: $primary-900;
   }
 }

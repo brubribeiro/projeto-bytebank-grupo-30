@@ -29,10 +29,16 @@ Este projeto é parte da formação em Engenharia Front-End da FIAP + Alura, uti
   npm install
 ```
 
-### Rodar em modo desenvolvimento
+### Rodar em modo desenvolvimento consumindo mockon
 
 ```bash
   npm run start
+```
+
+### Rodar em modo desenvolvimento consumindo db.json para simular CRUD
+
+```bash
+  npm run dev:api
 ```
 
 ### Build de produção
@@ -44,7 +50,7 @@ Este projeto é parte da formação em Engenharia Front-End da FIAP + Alura, uti
 ### Testes
 
 ```bash
-  npm run start
+  npm run test
 ```
 
 ### Renderização SSR

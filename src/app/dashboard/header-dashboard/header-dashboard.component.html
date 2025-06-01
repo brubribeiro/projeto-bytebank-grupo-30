@@ -1,7 +1,25 @@
 <mat-toolbar class="header">
-  <button mat-icon-button class="menu-button" (click)="toggleSidenav()">
+  <button
+    mat-icon-button
+    class="menu-button"
+    [matMenuTriggerFor]="menu"
+    aria-label="Menu"
+  >
     <mat-icon class="menu-button-icon mat-24" fontIcon="menu"></mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <ng-container *ngFor="let item of menuItems">
+      <a
+        mat-menu-item
+        [routerLinkActive]="'active'"
+        [href]="item.route"
+        [class.active]="item.active"
+      >
+        <span>{{ item.label }}</span>
+        <hr />
+      </a>
+    </ng-container>
+  </mat-menu>
   <div class="user-info">
     <span class="user-info__name">{{ nome }}</span>
     <mat-icon class="user-info__icon" fontIcon="person_outline"></mat-icon>

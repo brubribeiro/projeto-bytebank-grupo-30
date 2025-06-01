@@ -23,4 +23,12 @@ export class AccountService extends BaseService<Account> {
   getAccountSnapshot(): Account | null {
     return this.accountSubject.getValue();
   }
+
+  updateAccountName(id: string, newName: string): Observable<Account> {
+    return this.http
+      .patch<Account>(`${this.baseUrl}/${id}`, {
+        customer: { name: newName },
+      })
+      .pipe(tap((updatedAccount) => this.accountSubject.next(updatedAccount)));
+  }
 }
