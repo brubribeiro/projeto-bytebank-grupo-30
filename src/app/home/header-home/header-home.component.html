@@ -1,7 +1,7 @@
 <mat-toolbar class="header header--menu">
   <button
     mat-icon-button
-    class="menu-button"
+    class="header__menu-button"
     [matMenuTriggerFor]="menu"
     aria-label="Menu"
   >
@@ -16,7 +16,19 @@
     </ng-container>
   </mat-menu>
 
-  <span class="brand-logo">
-    <img src="assets/Logo.svg" alt="Bytebank" height="24" />
+  <span class="header__logo">
+    <img src="assets/Logo.svg" alt="Bytebank" class="header__logo-img" height="24" />
+    <img src="assets/logo-min.svg" alt="Bytebank" class="header__logo-img header__logo-img--tablet" height="24" />
   </span>
+
+  <nav class="header__menu">
+    <a
+      *ngFor="let item of menuItems"
+      [href]="item.route"
+      class="header__menu-item"
+      [ngClass]="item.class"
+    >
+      {{ item.label }}
+    </a>
+  </nav>
 </mat-toolbar>
