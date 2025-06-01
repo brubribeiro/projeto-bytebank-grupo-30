@@ -31,12 +31,12 @@
     </ng-container>
 
     <ng-template #editTemplate>
-      <form (submit)="updateCustomerName(temporaryName)">
+      <form (submit)="updateCustomerName(temporaryName)" class="edit-name-form">
         <input
           type="text"
           [(ngModel)]="temporaryName"
           name="name"
-          class="edit-nome-input"
+          class="edit-name-form__input"
           (click)="$event.stopPropagation()"
           (blur)="updateCustomerName(temporaryName)"
         />
