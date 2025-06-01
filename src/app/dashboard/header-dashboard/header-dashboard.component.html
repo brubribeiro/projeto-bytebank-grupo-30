@@ -20,8 +20,28 @@
       </a>
     </ng-container>
   </mat-menu>
-  <div class="user-info">
-    <span class="user-info__name">{{ nome }}</span>
-    <mat-icon class="user-info__icon" fontIcon="person_outline"></mat-icon>
+  <div
+    class="user-info"
+    id="user-info"
+    (click)="temporaryName = name; isEditingName = true"
+  >
+    <ng-container *ngIf="!isEditingName; else editTemplate">
+      <span class="user-info__name">{{ name }}</span>
+      <mat-icon class="user-info__icon" fontIcon="person_outline"></mat-icon>
+    </ng-container>
+
+    <ng-template #editTemplate>
+      <form (submit)="updateCustomerName(temporaryName)">
+        <input
+          type="text"
+          [(ngModel)]="temporaryName"
+          name="name"
+          class="edit-nome-input"
+          (click)="$event.stopPropagation()"
+          (blur)="updateCustomerName(temporaryName)"
+        />
+        <mat-icon class="user-info__icon">edit</mat-icon>
+      </form>
+    </ng-template>
   </div>
 </mat-toolbar>

@@ -25,10 +25,19 @@ export class AccountService extends BaseService<Account> {
   }
 
   updateAccountName(id: string, newName: string): Observable<Account> {
-    return this.http
-      .patch<Account>(`${this.baseUrl}/${id}`, {
-        customer: { name: newName },
-      })
-      .pipe(tap((updatedAccount) => this.accountSubject.next(updatedAccount)));
+    const currentAccount = this.getAccountSnapshot();
+    if (!currentAccount) {
+      throw new Error('No account loaded');
+    }
+    return this.patch(`${id}`, {
+      customer: {
+        id: currentAccount.customer.id,
+        name: newName,
+        email: currentAccount.customer.email,
+      },
+      id: currentAccount.id,
+      number: currentAccount.number,
+      balance: currentAccount.balance,
+    }).pipe(tap((updatedAccount) => this.accountSubject.next(updatedAccount)));
   }
 }

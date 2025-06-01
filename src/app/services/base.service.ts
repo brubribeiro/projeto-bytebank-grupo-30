@@ -26,6 +26,10 @@ export abstract class BaseService<T> {
     return this.http.put<T>(`${this.baseUrl}/${this.entityPath}/${id}`, data);
   }
 
+  patch(id: string, data: T) {
+    return this.http.patch<T>(`${this.baseUrl}/${this.entityPath}/${id}`, data);
+  }
+
   delete(id: string) {
     return this.http.delete<void>(`${this.baseUrl}/${this.entityPath}/${id}`);
   }

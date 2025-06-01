@@ -45,13 +45,13 @@
   ],
   "accounts": [
     {
+      "customer": {
+        "name": "Lemonades",
+        "email": "alex@email.com"
+      },
       "id": "1",
       "number": "11111-1",
-      "balance": 8000,
-      "customer": {
-        "name": "Alex Silva",
-        "email": "alex@email.com"
-      }
+      "balance": 8000
     },
     {
       "id": "2",

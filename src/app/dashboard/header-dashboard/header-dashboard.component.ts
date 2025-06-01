@@ -8,7 +8,9 @@ import { MenuItem } from '../../interfaces/menu-item.interface';
   styleUrl: './header-dashboard.component.scss',
 })
 export class HeaderDashboardComponent implements OnInit {
-  nome = 'Joana da Silva';
+  name = 'Joana da Silva';
+  isEditingName = false;
+  temporaryName = '';
 
   constructor(private accountService: AccountService) {}
 
@@ -22,20 +24,21 @@ export class HeaderDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.accountService.loadAccount().subscribe({
       next: (account) => {
-        this.nome = account.customer.name;
+        this.name = account.customer.name;
       },
       error: (err) => {
         console.error('Erro ao carregar conta:', err);
       },
     });
+    this.temporaryName = this.name;
   }
 
-  updateCustomerName(): void {
-    const novoNome = prompt('Digite o novo nome:', this.nome);
-    if (novoNome && novoNome.trim() !== '') {
-      this.accountService.updateAccountName('1', novoNome.trim()).subscribe({
+  updateCustomerName(newName: string): void {
+    if (newName && newName.trim() !== '') {
+      this.accountService.updateAccountName('1', newName.trim()).subscribe({
         next: (account) => {
-          this.nome = account.customer.name;
+          this.name = account.customer.name;
+          this.isEditingName = false;
         },
         error: (err) => {
           console.error('Erro ao atualizar nome:', err);
