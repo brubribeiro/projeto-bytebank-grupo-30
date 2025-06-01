@@ -42,5 +42,61 @@
       "date": "2025-05-31T22:41:50.021Z",
       "type": "Depósito"
     }
-  ]
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "number": "11111-1",
+      "balance": 8000,
+      "customer": {
+        "name": "Alex",
+        "email": "alex@email.com"
+      }
+    },
+    {
+      "id": "2",
+      "number": "22222-2",
+      "balance": 9500,
+      "customer": {
+        "name": "Anderson Lima",
+        "email": "anderson.lima@email.com"
+      }
+    },
+    {
+      "id": "3",
+      "number": "33333-3",
+      "balance": 7000,
+      "customer": {
+        "name": "BRuna",
+        "email": "bruna@email.com"
+      }
+    },
+    {
+      "id": "4",
+      "number": "44444-4",
+      "balance": 6200,
+      "customer": {
+        "name": "Herbert",
+        "email": "herbert@email.com"
+      }
+    },
+    {
+      "id": "5",
+      "number": "55555-5",
+      "balance": 8100,
+      "customer": {
+        "name": "Thiago",
+        "email": "thiago@email.com"
+      }
+    }
+  ],
+  "accounts/1": {
+    "id": "1",
+    "number": "11111-1",
+    "balance": 8000,
+    "customer": {
+      "name": "Alex",
+      "email": "alex@email.com"
+    }
+  }
 }
