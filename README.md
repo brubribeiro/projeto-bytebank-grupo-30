@@ -20,8 +20,14 @@ Este projeto é parte da formação em Engenharia Front-End da FIAP + Alura, uti
 
 ### Requisitos
 
-- Node.js v18+
-- Angular CLI v17+
+- [Node.js v18+](https://nodejs.org/en/download/)
+
+- [Angular CLI v17+](https://angular.dev/tools/cli)
+  Instale globalmente com:
+
+  ```bash
+    npm install -g @angular/cli
+  ```
 
 ### Instalação
 
