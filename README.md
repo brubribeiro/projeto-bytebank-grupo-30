@@ -7,12 +7,12 @@ Este projeto é parte da formação em Engenharia Front-End da FIAP + Alura, uti
 ## 🧰 Tecnologias Utilizadas
 
 - [Angular 17](https://angular.dev)
-- Angular Material + CDK
-- RxJS
-- Bootstrap 5.3
-- SSR com Express
-- TypeScript
-- Karma + Jasmine (testes unitários)
+- [Angular Material + CDK](https://material.angular.io/)
+- [RxJS](https://rxjs.dev/)
+- [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [SSR com Express](https://expressjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Karma + Jasmine (testes unitários)](https://karma-runner.github.io/latest/index.html), [Jasmine](https://jasmine.github.io/)
 
 ---
 
@@ -78,14 +78,54 @@ Link para os diagramas GitDiagram:
 💡 Features Futuras
 ...
 
+### Figma
+
+- [Figma | Fluxo](https://www.figma.com/design/195jMSq979FiewTWRE0Ltl/Tech-Challenge?node-id=1-166&p=f)  
+  Visualização do fluxo de navegação da aplicação, mostrando as principais telas, caminhos do usuário e interações previstas no projeto.
+
+- [Figma | Design System](https://www.figma.com/design/195jMSq979FiewTWRE0Ltl/Tech-Challenge?node-id=0-1&p=f)  
+  Biblioteca de componentes visuais, cores, tipografia e padrões de interface utilizados para garantir consistência no design da aplicação.
+
 ### Mocks com Mockoon
 
 Leia a documentação no link abaixo:
 [Mockoon](./src/mocks/README.MD)
 
+### Demo
+
+Capturas de tela e videos do funcionamento do fluxo
+[Demo | showcase](showcase/index.md)
+
+### Mobile showcase
+
+![alt text](showcase/release_1.0.0/images/mobile_show_case.gif)
+
 👥 Integrantes do Grupo 30
-• Bruna Ribeiro
-• Thyago Do Nascimento Pereira
-• Anderson Lima
-• Hebert
-• Alex
+
+> Alexsander de Almeida Perusso  
+> alexperusso@gmail.com  
+> RM364149
+
+---
+
+> Anderson Santos De Lima  
+> andersonlimahw@gmail.com  
+> RM363575
+
+---
+
+> Bruna Barreto Ribeiro  
+> bru.barretoribeiro@gmail.com  
+> RM362095
+
+---
+
+> Herbert Rezende Ferreira  
+> hrezendeferreira@gmail.com  
+> RM363976
+
+---
+
+> Thyago do Nascimento Pereira  
+> thyagopereira41@gmail.com
+> RM362540

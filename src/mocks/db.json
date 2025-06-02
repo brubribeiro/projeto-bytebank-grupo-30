@@ -41,6 +41,54 @@
       "value": 5500,
       "date": "2025-05-31T22:41:50.021Z",
       "type": "Depósito"
+    },
+    {
+      "id": "eo33zru0jpp",
+      "value": 100,
+      "date": "2025-06-02T00:37:16.414Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "72c47isa4ix",
+      "value": 100,
+      "date": "2025-06-02T00:37:23.903Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "eutcfincslb",
+      "value": -50000,
+      "date": "2025-06-02T00:37:31.668Z",
+      "type": "Transferência"
+    },
+    {
+      "id": "17ebd6wmx5e",
+      "value": 50000,
+      "date": "2025-06-02T00:37:40.642Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "qbvbadvzj89",
+      "value": 500,
+      "date": "2025-06-02T00:38:43.594Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "0pk94udzii3e",
+      "value": -500,
+      "date": "2025-06-02T00:38:53.692Z",
+      "type": "Transferência"
+    },
+    {
+      "id": "6mqyb3ukxnu",
+      "value": 5000,
+      "date": "2025-06-02T00:47:05.948Z",
+      "type": "Depósito"
+    },
+    {
+      "id": "igpo2kkpek",
+      "value": -2500,
+      "date": "2025-06-02T00:47:19.946Z",
+      "type": "Transferência"
     }
   ],
   "accounts": [
