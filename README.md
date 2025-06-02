@@ -91,6 +91,8 @@ Link para os diagramas GitDiagram:
 
 - [Figma | Design System](https://www.figma.com/design/195jMSq979FiewTWRE0Ltl/Tech-Challenge?node-id=0-1&p=f)  
   Biblioteca de componentes visuais, cores, tipografia e padrões de interface utilizados para garantir consistência no design da aplicação.
+  Implementado em
+  [src/styles](src/styles)
 
 ### Mocks com Mockoon
 
